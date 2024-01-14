@@ -1,5 +1,4 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ArrowRightIcon, BookIcon, BookOpenTextIcon } from "lucide-react";
 import NewsletterSection from "./(newsletter)/newsletter-section";
 
 export default function Home() {
