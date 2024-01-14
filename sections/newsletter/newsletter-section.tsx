@@ -41,14 +41,14 @@ const NewsletterSection = () => {
       <NewsletterCard />
 
       <header className="flex">
-        <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+        <h3 className="scroll-m-20 text-lg font-semibold tracking-tight">
           Newsletter Issues
         </h3>
         <a
           rel="noopener noreferrer"
           target="_blank"
           href="https://alicalimli.beehiiv.com/"
-          className="ml-auto flex items-center gap-2"
+          className="ml-auto flex items-center gap-2 text-sm"
         >
           View All Issues <ArrowRightIcon className="w-5" />
         </a>

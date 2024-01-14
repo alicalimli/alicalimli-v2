@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import NewsletterSection from "./(newsletter)/newsletter-section";
+import NewsletterSection from "../sections/newsletter/newsletter-section";
+import ProductsSection from "@/sections/products/products-section";
 
 export default function Home() {
   return (
@@ -25,6 +26,10 @@ export default function Home() {
 
       <section className="mt-8 flex flex-col gap-4">
         <NewsletterSection />
+      </section>
+
+      <section className="mt-8 flex flex-col gap-4">
+        <ProductsSection />
       </section>
     </main>
   );
