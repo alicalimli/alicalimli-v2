@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Newsletter } from "./newsletter";
+import { ArrowRightIcon, BookIcon, BookOpenTextIcon } from "lucide-react";
+import NewsletterSection from "./(newsletter)/newsletter-section";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
           <AvatarFallback>AL</AvatarFallback>
         </Avatar>
 
-        <h2 className="text-3xl font-semibold mt-2 tracking-tight">
+        <h2 className="scroll-m-20 text-3xl font-semibold mt-2 tracking-tight">
           Ali Calimli
         </h2>
         <p className="text-xl text-white/80">
@@ -23,8 +24,8 @@ export default function Home() {
         </p>
       </header>
 
-      <section className="mt-8">
-        <Newsletter />
+      <section className="mt-8 flex flex-col gap-4">
+        <NewsletterSection />
       </section>
     </main>
   );
