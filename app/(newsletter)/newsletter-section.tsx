@@ -23,11 +23,11 @@ const NewsletterSection = () => {
   const renderIssues = recentIssues.map((issue) => (
     <li key={issue.title}>
       <button className="text-start">
-        <h4 className="scroll-m-20 text-xl opacity-90 tracking-tight">
+        <h4 className="scroll-m-20 text-lg opacity-90 tracking-tight">
           {issue.title}
         </h4>
 
-        <p className="text-lg text-muted-foreground">{issue.subtitle}</p>
+        <p className="text-md text-muted-foreground">{issue.subtitle}</p>
 
         <p className="text-sm  text-muted-foreground mt-2">
           <BookOpenTextIcon className="inline w-5" /> {issue.readTime}
