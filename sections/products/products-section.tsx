@@ -1,15 +1,8 @@
-import { ArrowRightIcon, BookIcon, BookOpenTextIcon } from "lucide-react";
-import { ProductCard } from "./product-card";
+import { ArrowRightIcon } from "lucide-react";
 import * as React from "react";
 
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { CardDescription, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
 const products = [

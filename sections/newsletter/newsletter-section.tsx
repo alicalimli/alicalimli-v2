@@ -3,8 +3,8 @@ import { NewsletterCard } from "./newsletter-card";
 
 const recentIssues = [
   {
-    title: "The Easiest Way to Build your Online Presence",
-    subtitle: "I started building mine by doing this.",
+    title: "Fundamentals are enough to build something awesome",
+    subtitle: "Ignore that self limiting belief that its not possible.",
     readTime: "3 min read",
   },
   {
@@ -13,8 +13,8 @@ const recentIssues = [
     readTime: "3 min read",
   },
   {
-    title: "The Easiest Way to Build your Online Presence",
-    subtitle: "I started building mine by doing this.",
+    title: "You have to code or build SOMETHING",
+    subtitle: "If you want to improve as a developer, this is the way.",
     readTime: "3 min read",
   },
 ];
