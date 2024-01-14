@@ -17,33 +17,49 @@ const products = [
     name: "WebDevVisuals",
     description:
       "A platform to learn tips & tricks that would take your web dev skills to the next level all in one place.",
-    price: 19.99,
-    link: "https://example.com/product1",
+    cta: "Learn more",
+    link: "https://www.webdevvisuals.com/",
   },
   {
-    name: "Product 2",
+    name: "Essential Tips & Tricks",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum nobis omnis minus doloribus ratione incidunt.",
-    price: 29.99,
-    link: "https://example.com/product2",
+      "Essential tips and tricks that would level up your website and your visitors user experience.",
+    cta: "Build In Progress",
+    link: "",
   },
 ];
 
 const ProductsSection = () => {
   const renderProducts = products.map((product) => (
-    <li key={product.name}>
-      <Card className="h-full flex flex-col">
-        <CardHeader>
-          <div className="flex justify-center bg-muted rounded-md">
-            <Image src="/products/webdevvisuals.png" width={300} height={300} />
-          </div>
-          <CardTitle className="text-xl">{product.name}</CardTitle>
-          <CardDescription>{product.description}</CardDescription>
-        </CardHeader>
-        <CardFooter className="flex justify-between gap-2 mt-auto">
-          <Button className="w-full">Buy Now</Button>
-        </CardFooter>
-      </Card>
+    <li key={product.name} className="h-full flex flex-col">
+      <div className="flex justify-center bg-[#111] rounded-xl aspect-video">
+        <Image
+          className="object-contain"
+          src="/products/webdevvisuals.png"
+          width={300}
+          height={300}
+        />
+      </div>
+
+      <CardTitle className="text-xl mt-4">{product.name}</CardTitle>
+      <CardDescription className="mb-8 mt-1 leading-6">
+        {product.description}
+      </CardDescription>
+
+      <Button
+        variant={product.link ? "default" : "outline"}
+        className="w-full mt-auto"
+        asChild
+      >
+        <a
+          className={product.link ? "" : "pointer-events-none"}
+          rel="noopener noreferrer"
+          target="_blank"
+          href={product.link}
+        >
+          {product.cta}
+        </a>
+      </Button>
     </li>
   ));
 
@@ -64,7 +80,7 @@ const ProductsSection = () => {
       </header>
 
       <main>
-        <ul className="grid grid-cols-2 gap-4 relative">{renderProducts}</ul>
+        <ul className="grid grid-cols-2 gap-8 relative">{renderProducts}</ul>
       </main>
     </>
   );
