@@ -23,7 +23,7 @@ const recentIssues = [
 const NewsletterSection = () => {
   const renderIssues = recentIssues.map((issue) => (
     <li key={issue.title}>
-      <button className="text-start">
+      <button className="text-start duration-300 hover:opacity-70">
         <h4 className="scroll-m-20 text-lg opacity-90 tracking-tight">
           {issue.title}
         </h4>
@@ -47,7 +47,7 @@ const NewsletterSection = () => {
         }}
       />
 
-      <ul className="flex flex-col gap-4">{renderIssues}</ul>
+      <ul className="flex flex-col gap-4 mt">{renderIssues}</ul>
     </>
   );
 };
