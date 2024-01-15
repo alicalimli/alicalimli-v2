@@ -6,15 +6,12 @@ import { cn } from "@/lib/utils";
 interface SectionHeaderProps {
   title: string;
   className?: string;
-  viewAllText?: {
-    text: string;
-    link: string;
-  };
+  viewAllLink?: string;
 }
 
 const SectionHeader = ({
   title,
-  viewAllText,
+  viewAllLink,
   className,
 }: SectionHeaderProps) => {
   return (
@@ -23,18 +20,14 @@ const SectionHeader = ({
         {title}
       </h3>
 
-      {!viewAllText ? null : (
+      {!viewAllLink ? null : (
         <Button
           variant={"ghost"}
           asChild
           className="ml-auto flex items-center gap-2 text-sm"
         >
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://alicalimli.beehiiv.com/"
-          >
-            {viewAllText.text}
+          <a rel="noopener noreferrer" target="_blank" href={viewAllLink}>
+            View All
             <ArrowRightIcon className="w-5" />
           </a>
         </Button>

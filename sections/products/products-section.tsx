@@ -2,7 +2,14 @@ import { ArrowRightIcon } from "lucide-react";
 import * as React from "react";
 
 import { Button } from "@/components/ui/button";
-import { CardDescription, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import Image from "next/image";
 import SectionHeader from "@/components/section-header/section-header";
 
@@ -25,35 +32,45 @@ const products = [
 
 const ProductsSection = () => {
   const renderProducts = products.map((product) => (
-    <li key={product.name} className="h-full flex flex-col">
-      <div className="flex justify-center bg-[#111] rounded-xl aspect-video">
-        <Image
-          className="object-contain"
-          src="/products/webdevvisuals.png"
-          width={300}
-          height={300}
-        />
-      </div>
+    <li key={product.name}>
+      <Card className="flex flex-col h-full">
+        <CardHeader className="p-4">
+          <div className="flex justify-center bg-[#111] aspect-video rounded-md rounded-b-none">
+            <Image
+              className="object-contain"
+              src="/products/webdevvisuals.png"
+              width={300}
+              height={300}
+            />
+          </div>
+        </CardHeader>
 
-      <CardTitle className="text-xl mt-4">{product.name}</CardTitle>
-      <CardDescription className="mb-8 mt-1 leading-6">
-        {product.description}
-      </CardDescription>
+        <CardContent className="px-4">
+          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+            {product.name}
+          </h4>
+          <p className="text-sm text-muted-foreground mt-1">
+            {product.description}
+          </p>
+        </CardContent>
 
-      <Button
-        variant={product.link ? "default" : "outline"}
-        className="w-full mt-auto"
-        asChild
-      >
-        <a
-          className={product.link ? "" : "pointer-events-none"}
-          rel="noopener noreferrer"
-          target="_blank"
-          href={product.link}
-        >
-          {product.cta}
-        </a>
-      </Button>
+        <CardFooter className="mt-auto px-4 pb-4">
+          <Button
+            variant={product.link ? "default" : "outline"}
+            className="w-full mt-auto mt-4"
+            asChild
+          >
+            <a
+              className={product.link ? "" : "pointer-events-none"}
+              rel="noopener noreferrer"
+              target="_blank"
+              href={product.link}
+            >
+              {product.cta}
+            </a>
+          </Button>
+        </CardFooter>
+      </Card>
     </li>
   ));
 
@@ -61,14 +78,11 @@ const ProductsSection = () => {
     <>
       <SectionHeader
         title="Resources"
-        viewAllText={{
-          text: "View All Resources",
-          link: "https://alicalimli.beehiiv.com/",
-        }}
+        viewAllLink="https://alicalimli.beehiiv.com/"
       />
 
       <main>
-        <ul className="grid grid-cols-2 gap-8 relative">{renderProducts}</ul>
+        <ul className="grid xs:grid-cols-2 gap-8 relative">{renderProducts}</ul>
       </main>
     </>
   );

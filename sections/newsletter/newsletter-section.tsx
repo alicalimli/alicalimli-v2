@@ -40,11 +40,8 @@ const NewsletterSection = () => {
   return (
     <>
       <SectionHeader
-        title="Newsletter Issues"
-        viewAllText={{
-          text: "View All Issues",
-          link: "https://alicalimli.beehiiv.com/",
-        }}
+        title="Newsletters"
+        viewAllLink="https://alicalimli.beehiiv.com/"
       />
 
       <ul className="flex flex-col gap-4 mt">{renderIssues}</ul>
