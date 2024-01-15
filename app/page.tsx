@@ -1,10 +1,11 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import NewsletterSection from "../sections/newsletter/newsletter-section";
 import ProductsSection from "@/sections/products/products-section";
+import { NewsletterCard } from "@/sections/newsletter/newsletter-card";
 
 export default function Home() {
   return (
-    <main className="max-w-2xl mx-auto min-h-screen p-4 py-24">
+    <main className="max-w-2xl mx-auto min-h-screen p-4 py-24 flex flex-col gap-8">
       <header className="">
         <Avatar className="w-24 h-24">
           <AvatarImage src="/alicalimli.jpg" alt="Ali Calimli's Profile" />
@@ -18,17 +19,19 @@ export default function Home() {
           Front-end Developer & Content Creator
         </p>
 
-        <p className="text-xl text-muted-foreground mt-3">
+        <p className="text-xl text-muted-foreground my-3">
           Focused on building awesome and high-quality websites that are also
           visually appealing and easy to use.
         </p>
+
+        <NewsletterCard />
       </header>
 
-      <section className="mt-8 flex flex-col gap-4">
+      <section>
         <NewsletterSection />
       </section>
 
-      <section className="mt-8 flex flex-col gap-4">
+      <section>
         <ProductsSection />
       </section>
     </main>

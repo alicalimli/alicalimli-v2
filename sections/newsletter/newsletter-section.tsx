@@ -1,5 +1,6 @@
 import { ArrowRightIcon, BookIcon, BookOpenTextIcon } from "lucide-react";
-import { NewsletterCard } from "./newsletter-card";
+
+import SectionHeader from "@/components/section-header/section-header";
 
 const recentIssues = [
   {
@@ -38,21 +39,14 @@ const NewsletterSection = () => {
 
   return (
     <>
-      <NewsletterCard />
+      <SectionHeader
+        title="Newsletter Issues"
+        viewAllText={{
+          text: "View All Issues",
+          link: "https://alicalimli.beehiiv.com/",
+        }}
+      />
 
-      <header className="flex">
-        <h3 className="scroll-m-20 text-lg font-semibold tracking-tight">
-          Newsletter Issues
-        </h3>
-        <a
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://alicalimli.beehiiv.com/"
-          className="ml-auto flex items-center gap-2 text-sm"
-        >
-          View All Issues <ArrowRightIcon className="w-5" />
-        </a>
-      </header>
       <ul className="flex flex-col gap-4">{renderIssues}</ul>
     </>
   );
