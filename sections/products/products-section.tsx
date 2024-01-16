@@ -1,14 +1,11 @@
-import { ArrowRightIcon } from "lucide-react";
 import * as React from "react";
 
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
 import SectionHeader from "@/components/section-header/section-header";
@@ -33,10 +30,11 @@ const products = [
 const ProductsSection = () => {
   const renderProducts = products.map((product) => (
     <li key={product.name}>
-      <Card className="flex flex-col h-full">
+      <Card className="flex flex-col h-full hover:bg-border/30 duration-200">
         <CardHeader className="p-4">
           <div className="flex justify-center bg-[#111] aspect-video rounded-md rounded-b-none">
             <Image
+              alt={`${product.name} product image`}
               className="object-contain"
               src="/products/webdevvisuals.png"
               width={300}
