@@ -19,11 +19,11 @@ const products = [
     link: "https://www.webdevvisuals.com/",
   },
   {
-    name: "Essential Tips & Tricks",
+    name: "Essential Tips & Tricks (Free)",
     description:
-      "Essential tips and tricks that would level up your website and your visitors user experience.",
-    cta: "Build In Progress",
-    link: "",
+      "Essential tips and tricks that would level up your website and your visitor's user experience.",
+    cta: "Join The Wailist",
+    link: "https://alicalimli.beehiiv.com/subscribe",
   },
 ];
 
