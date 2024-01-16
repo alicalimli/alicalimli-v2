@@ -2,6 +2,8 @@ import NewsletterSection from "../sections/newsletter/newsletter-section";
 import ProductsSection from "@/sections/products/products-section";
 import { useState } from "react";
 import Profile from "@/sections/profile/Profile";
+import AboutMe from "@/sections/about-me/AboutMe";
+import { NewsletterCard } from "@/sections/newsletter/newsletter-card";
 
 export default function Home() {
   return (
@@ -16,6 +18,14 @@ export default function Home() {
 
       <section>
         <ProductsSection />
+      </section>
+
+      <section>
+        <AboutMe />
+      </section>
+
+      <section>
+        <NewsletterCard />
       </section>
     </main>
   );

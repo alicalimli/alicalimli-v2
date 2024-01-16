@@ -55,7 +55,7 @@ const ProductsSection = () => {
         <CardFooter className="mt-auto px-4 pb-4">
           <Button
             variant={product.link ? "default" : "outline"}
-            className="w-full mt-auto mt-4"
+            className="w-full mt-4"
             asChild
           >
             <a
