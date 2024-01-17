@@ -30,7 +30,7 @@ const products = [
 const ProductsSection = () => {
   const renderProducts = products.map((product) => (
     <li key={product.name}>
-      <Card className="flex flex-col h-full hover:bg-border/30 duration-200">
+      <Card className="flex flex-col h-full hover:bg-border hover:-translate-y-2 duration-300">
         <CardHeader className="p-4">
           <div className="flex justify-center bg-[#111] aspect-video rounded-md rounded-b-none">
             <Image
