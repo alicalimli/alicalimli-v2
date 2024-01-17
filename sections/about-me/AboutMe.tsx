@@ -17,9 +17,9 @@ const AboutMe = ({}: AboutMeProps) => {
         </p>
 
         <p>
-          I help people succeed in their web development journey by providing
-          valuable knowledge that I have learned throughout my own web dev
-          journey.
+          I help aspiring developers succeed in their web development journey by
+          providing valuable knowledge that I have learned throughout my own web
+          dev journey.
         </p>
 
         <p>
