@@ -76,7 +76,7 @@ const ProductsSection = () => {
     <>
       <SectionHeader
         title="Resources"
-        viewAllLink="https://alicalimli.beehiiv.com/"
+        // viewAllLink="https://alicalimli.beehiiv.com/"
       />
 
       <main>
