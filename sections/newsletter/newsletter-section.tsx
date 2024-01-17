@@ -2,14 +2,16 @@ import { ArrowRightIcon, BookIcon, BookOpenTextIcon } from "lucide-react";
 
 import SectionHeader from "@/components/section-header/section-header";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
+import Image from "next/image";
 
 const recentIssues = [
-  {
-    title: "Fundamentals are enough to build something awesome",
-    subtitle: "Ignore that self limiting belief that its not possible.",
-    readTime: "3 min read",
-    link: "https://alicalimli.beehiiv.com/p/fundamentals-are-enough-to-build-something-awesome",
-  },
   {
     title: "The Easiest Way to Build your Online Presence",
     subtitle: "I started building mine by doing this.",
@@ -27,18 +29,43 @@ const recentIssues = [
 const NewsletterSection = () => {
   const renderIssues = recentIssues.map((issue) => (
     <li key={issue.title}>
-      <Link
-        rel="noopener noreferrer"
-        target="_blank"
-        href={issue.link}
-        className="text-start duration-300 hover:opacity-70"
-      >
-        <h4 className="scroll-m-20 text-lg tracking-tight opacity-95">
-          {issue.title}
-        </h4>
+      <Card className="flex flex-col h-full hover:bg-border/30 duration-200">
+        <CardHeader className="p-4">
+          <div className="flex justify-center bg-[#111] aspect-video rounded-md rounded-b-none">
+            <Image
+              alt={`${issue.title} issue image`}
+              className="object-contain"
+              src="/newsletter-banner.png"
+              width={300}
+              height={300}
+            />
+          </div>
+        </CardHeader>
 
-        <p className="text-md text-muted-foreground">{issue.subtitle}</p>
-      </Link>
+        <CardContent className="px-4">
+          <h5 className="scroll-m-20 text-lg font-semibold tracking-tight">
+            {issue.title}
+          </h5>
+          <p className="text-sm text-muted-foreground mt-1">{issue.subtitle}</p>
+        </CardContent>
+
+        <CardFooter className="mt-auto px-4 pb-4">
+          <Button
+            variant={issue.link ? "default" : "outline"}
+            className="w-full mt-4"
+            asChild
+          >
+            <a
+              className={issue.link ? "" : "pointer-events-none"}
+              rel="noopener noreferrer"
+              target="_blank"
+              href={issue.link}
+            >
+              Read
+            </a>
+          </Button>
+        </CardFooter>
+      </Card>
     </li>
   ));
 
@@ -49,7 +76,7 @@ const NewsletterSection = () => {
         viewAllLink="https://alicalimli.beehiiv.com/"
       />
 
-      <ul className="flex flex-col gap-4 mt">{renderIssues}</ul>
+      <ul className="grid xs:grid-cols-2 gap-8 relative">{renderIssues}</ul>
     </>
   );
 };
