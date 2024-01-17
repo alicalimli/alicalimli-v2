@@ -33,7 +33,7 @@ const NewsletterSection = () => {
         href={issue.link}
         className="text-start duration-300 hover:opacity-70"
       >
-        <h4 className="scroll-m-20 text-lg opacity-90 tracking-tight">
+        <h4 className="scroll-m-20 text-lg tracking-tight opacity-95">
           {issue.title}
         </h4>
 

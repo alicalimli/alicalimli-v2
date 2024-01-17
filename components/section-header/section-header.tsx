@@ -16,7 +16,7 @@ const SectionHeader = ({
 }: SectionHeaderProps) => {
   return (
     <header className={cn("flex items-center mb-3", className)}>
-      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight opacity-95">
         {title}
       </h4>
 
@@ -24,11 +24,11 @@ const SectionHeader = ({
         <Button
           variant={"ghost"}
           asChild
-          className="ml-auto flex items-center gap-2 text-sm"
+          className="ml-auto flex items-center gap-2 text-sm text-muted-foreground group"
         >
           <a rel="noopener noreferrer" target="_blank" href={viewAllLink}>
             View All
-            <ArrowRightIcon className="w-5" />
+            <ArrowRightIcon className="w-5 group-hover:translate-x-1 duration-200" />
           </a>
         </Button>
       )}
