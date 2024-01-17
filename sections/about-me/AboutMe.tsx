@@ -12,7 +12,7 @@ const AboutMe = ({}: AboutMeProps) => {
         <p className="text-white font-medium">
           Hey I'm Ali. 👋
           <br />
-          I'm a Front-end Developer and a Creating Content for Front-end
+          I'm a Front-end Developer and I Create Content for Front-end
           Developers.
         </p>
 
