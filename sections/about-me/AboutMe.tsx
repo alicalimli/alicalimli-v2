@@ -8,8 +8,8 @@ const AboutMe = ({}: AboutMeProps) => {
     <>
       {" "}
       <SectionHeader title="About Me" />
-      <main className="flex flex-col gap-4 leading-7 text-white/90">
-        <p className="text-white font-medium">
+      <main className="flex flex-col gap-4 leading-7 text-muted-foreground text-lg">
+        <p className="text-white/85 font-semibold">
           Hey I'm Ali. 👋
           <br />
           I'm a Front-end Developer and I Create Content for Front-end

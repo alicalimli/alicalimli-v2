@@ -16,9 +16,9 @@ const SectionHeader = ({
 }: SectionHeaderProps) => {
   return (
     <header className={cn("flex items-center mb-3", className)}>
-      <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
         {title}
-      </h3>
+      </h4>
 
       {!viewAllLink ? null : (
         <Button

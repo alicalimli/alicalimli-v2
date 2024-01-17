@@ -44,9 +44,9 @@ const ProductsSection = () => {
         </CardHeader>
 
         <CardContent className="px-4">
-          <h4 className="scroll-m-20 text-xl font-semibold tracking-tight">
+          <h5 className="scroll-m-20 text-lg font-semibold tracking-tight">
             {product.name}
-          </h4>
+          </h5>
           <p className="text-sm text-muted-foreground mt-1">
             {product.description}
           </p>
