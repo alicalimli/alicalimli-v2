@@ -8,7 +8,6 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import Image from "next/image";
-import SectionHeader from "@/components/section-header/section-header";
 import { FaGithub } from "react-icons/fa6";
 import {
   Tooltip,
@@ -17,6 +16,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
+import Section from "@/components/section/section";
 
 const projects = [
   {
@@ -120,13 +120,11 @@ const ProjectsSection = () => {
   ));
 
   return (
-    <>
-      <SectionHeader title="Projects" />
-
+    <Section title="Projects">
       <main>
         <ul className="grid xs:grid-cols-2 gap-8 relative">{renderProjects}</ul>
       </main>
-    </>
+    </Section>
   );
 };
 

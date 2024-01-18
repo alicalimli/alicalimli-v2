@@ -1,13 +1,11 @@
-import SectionHeader from "@/components/section-header/section-header";
+import Section from "@/components/section/section";
 import React from "react";
 
 interface AboutMeProps {}
 
 const AboutMe = ({}: AboutMeProps) => {
   return (
-    <>
-      {" "}
-      <SectionHeader title="About Me" />
+    <Section title="About Me">
       <main className="flex flex-col gap-4 leading-7 text-muted-foreground text-lg">
         <p className="text-white/85 font-semibold">
           Hey I'm Ali. 👋
@@ -32,7 +30,7 @@ const AboutMe = ({}: AboutMeProps) => {
           will get back to you as soon as i can.
         </p>
       </main>
-    </>
+    </Section>
   );
 };
 

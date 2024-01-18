@@ -8,7 +8,7 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import Image from "next/image";
-import SectionHeader from "@/components/section-header/section-header";
+import Section from "@/components/section/section";
 
 const products = [
   {
@@ -73,16 +73,11 @@ const ProductsSection = () => {
   ));
 
   return (
-    <>
-      <SectionHeader
-        title="Resources"
-        // viewAllLink="https://alicalimli.beehiiv.com/"
-      />
-
+    <Section title="Resources">
       <main>
         <ul className="grid xs:grid-cols-2 gap-8 relative">{renderProducts}</ul>
       </main>
-    </>
+    </Section>
   );
 };
 

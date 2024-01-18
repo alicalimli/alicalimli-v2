@@ -1,7 +1,4 @@
-import { ArrowRightIcon, BookIcon, BookOpenTextIcon } from "lucide-react";
-
-import SectionHeader from "@/components/section-header/section-header";
-import Link from "next/link";
+import Section from "@/components/section/section";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -70,14 +67,9 @@ const NewsletterSection = () => {
   ));
 
   return (
-    <>
-      <SectionHeader
-        title="Newsletters"
-        viewAllLink="https://alicalimli.beehiiv.com/"
-      />
-
+    <Section title="Newsletters" viewAllLink="https://alicalimli.beehiiv.com/">
       <ul className="grid xs:grid-cols-2 gap-8 relative">{renderIssues}</ul>
-    </>
+    </Section>
   );
 };
 

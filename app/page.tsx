@@ -8,29 +8,17 @@ import ProjectsSection from "@/sections/projects/projects-section";
 export default function Home() {
   return (
     <main className="max-w-2xl mx-auto min-h-screen p-4 py-24 flex flex-col gap-12">
-      <header>
-        <Profile />
-      </header>
+      <Profile />
 
-      <section>
-        <NewsletterSection />
-      </section>
+      <NewsletterSection />
 
-      <section>
-        <ProductsSection />
-      </section>
+      <ProductsSection />
 
-      <section>
-        <ProjectsSection />
-      </section>
+      <ProjectsSection />
 
-      <section>
-        <AboutMe />
-      </section>
+      <AboutMe />
 
-      <section>
-        <NewsletterCard />
-      </section>
+      <NewsletterCard />
     </main>
   );
 }

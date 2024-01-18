@@ -71,7 +71,7 @@ const Profile = ({}: ProfileProps) => {
   ));
 
   return (
-    <>
+    <header>
       <Avatar className="w-24 h-24">
         <AvatarImage src="/alicalimli.jpg" alt="Ali Calimli's Profile" />
         <AvatarFallback>AL</AvatarFallback>
@@ -109,7 +109,7 @@ const Profile = ({}: ProfileProps) => {
           Join In
         </Button>
       </form>
-    </>
+    </header>
   );
 };
 
