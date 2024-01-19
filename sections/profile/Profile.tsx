@@ -95,7 +95,7 @@ const Profile = ({}: ProfileProps) => {
 
       <form
         onSubmit={handleSubmit}
-        className="flex gap-2 w-full items-center mt-4"
+        className="flex flex-col xs:flex-row gap-2 w-full items-center mt-4"
       >
         <Input
           className="h-11"
@@ -105,7 +105,7 @@ const Profile = ({}: ProfileProps) => {
           required
           placeholder="Enter your email"
         />
-        <Button size="lg" className="w-40">
+        <Button size="lg" className="w-full xs:w-40">
           Join In
         </Button>
       </form>

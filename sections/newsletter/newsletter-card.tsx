@@ -30,7 +30,10 @@ export function NewsletterCard() {
         </CardDescription>
       </CardHeader>
       <CardFooter>
-        <form onSubmit={handleSubmit} className="flex gap-2 w-full">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col xs:flex-row gap-2 w-full"
+        >
           <Input
             type="email"
             value={email}
@@ -38,7 +41,7 @@ export function NewsletterCard() {
             required
             placeholder="Enter your email"
           />
-          <Button className="w-40">Join In</Button>
+          <Button className="w-full xs:w-40">Join In</Button>
         </form>
       </CardFooter>
     </Card>
