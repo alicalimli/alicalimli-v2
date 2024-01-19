@@ -5,6 +5,7 @@ import AboutMe from "@/sections/about-me/AboutMe";
 import { NewsletterCard } from "@/sections/newsletter/newsletter-card";
 import ProjectsSection from "@/sections/projects/projects-section";
 import StackSection from "@/sections/stack/stack-section";
+import ContactSection from "@/sections/contact/contact-section";
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
       <StackSection />
 
       <AboutMe />
+
+      <ContactSection />
 
       <NewsletterCard />
     </main>
