@@ -1,4 +1,12 @@
+import {
+  SiFirebase,
+  SiNextdotjs,
+  SiRedux,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 import { ItemProps } from "./components/item-card/ItemCard";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 export const projects: ItemProps[] = [
   {
@@ -64,5 +72,38 @@ export const products: ItemProps[] = [
     cta: "Join The Wailist",
     link: "https://alicalimli.beehiiv.com/subscribe",
     thumbnail: "/products/webdevvisuals.png",
+  },
+];
+
+export const techStack = [
+  {
+    name: "NextJS",
+    Icon: SiNextdotjs,
+    tooltip: "JavaScript Framework",
+  },
+  {
+    name: "Redux Toolkit",
+    Icon: SiRedux,
+    tooltip: "State Management",
+  },
+  {
+    name: "TailwindCSS",
+    Icon: SiTailwindcss,
+    tooltip: "CSS Framework",
+  },
+  {
+    name: "Typescript",
+    Icon: SiTypescript,
+    tooltip: "JavaScript Extension",
+  },
+  {
+    name: "Firebase",
+    Icon: SiFirebase,
+    tooltip: "Application Backend",
+  },
+  {
+    name: "Framer Motion",
+    Icon: TbBrandFramerMotion,
+    tooltip: "Complex Animations & Transitions",
   },
 ];
