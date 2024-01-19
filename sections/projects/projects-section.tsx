@@ -11,9 +11,7 @@ const ProjectsSection = () => {
 
   return (
     <Section title="Projects">
-      <main>
-        <ul className="grid xs:grid-cols-2 gap-8 relative">{renderProjects}</ul>
-      </main>
+      <ul className="grid xs:grid-cols-2 gap-8 relative">{renderProjects}</ul>
     </Section>
   );
 };

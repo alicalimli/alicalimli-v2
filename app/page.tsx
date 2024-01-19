@@ -4,6 +4,7 @@ import Profile from "@/sections/profile/Profile";
 import AboutMe from "@/sections/about-me/AboutMe";
 import { NewsletterCard } from "@/sections/newsletter/newsletter-card";
 import ProjectsSection from "@/sections/projects/projects-section";
+import StackSection from "@/sections/stack/stack-section";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       <ProductsSection />
 
       <ProjectsSection />
+
+      <StackSection />
 
       <AboutMe />
 

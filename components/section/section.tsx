@@ -7,6 +7,7 @@ interface SectionProps {
   title: string;
   className?: string;
   headerClassName?: string;
+  mainClassName?: string;
   viewAllLink?: string;
   children: ReactNode;
 }
@@ -16,6 +17,7 @@ const Section = ({
   viewAllLink,
   className,
   headerClassName,
+  mainClassName,
   children,
 }: SectionProps) => {
   return (
@@ -39,7 +41,7 @@ const Section = ({
         )}
       </header>
 
-      {children}
+      <main className={mainClassName}>{children}</main>
     </section>
   );
 };
