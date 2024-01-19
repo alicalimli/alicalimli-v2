@@ -6,8 +6,9 @@ export const projects: ItemProps[] = [
     thumbnail: "/projects/acmessenger.png",
     description:
       "A Fullstack Chatapp that I've built to learn more about React and its popular libraries like redux, and also learn to use Firebase.",
-    cta: "Visit",
-    link: "https://alicalimli.beehiiv.com/subscribe",
+    cta: "Visit Website",
+    role: "Design & Development",
+    link: "https://ac-messenger-p.web.app/",
     sourceCode: "https://github.com/alicalimli/ac-messenger",
     technologies: [
       "ReactJS",
@@ -23,8 +24,9 @@ export const projects: ItemProps[] = [
     sourceCode: "https://github.com/alicalimli/movie-matrix-app/",
     description:
       "A Vanilla JS Project that I have built to deepen my knowledge about HTML, CSS and JavaScript and practice consuming API’s as well.",
-    cta: "Visit",
-    link: "https://www.webdevvisuals.com/",
+    cta: "Visit Website",
+    role: "Design & Development",
+    link: "https://moviematrix.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
   },
 ];

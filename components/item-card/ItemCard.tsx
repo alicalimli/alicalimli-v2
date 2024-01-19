@@ -21,6 +21,7 @@ export interface ItemProps {
   title: string;
   description: string;
   thumbnail: string;
+  role?: string;
   technologies?: string[];
   sourceCode?: string;
   link?: string;
@@ -33,7 +34,7 @@ interface ItemCardProps {
 
 const ItemCard = ({ item }: ItemCardProps) => {
   return (
-    <Card className="flex flex-col h-full hover:bg-border hover:-translate-y-2 duration-300">
+    <Card className="flex flex-col h-full hover:bg-border duration-300">
       <CardHeader className="p-4">
         <Link
           className="flex justify-center bg-muted aspect-video rounded-md rounded-b-none hover:brightness-75 duration-300"
@@ -52,6 +53,10 @@ const ItemCard = ({ item }: ItemCardProps) => {
       </CardHeader>
 
       <CardContent className="px-4">
+        <Conditional condition={Boolean(item.role)}>
+          <p className="text-xs text-muted-foreground">Design & Development</p>
+        </Conditional>
+
         <h5 className="scroll-m-20 text-lg font-semibold tracking-tight flex items-center gap-2">
           {item.title}
 
@@ -103,6 +108,19 @@ const ItemCard = ({ item }: ItemCardProps) => {
             {item.cta}
           </Link>
         </Button>
+
+        <Conditional condition={Boolean(item.sourceCode)}>
+          <Button variant={"secondary"} className="w-full mt-2" asChild>
+            <Link
+              className={item.link ? "" : "pointer-events-none"}
+              rel="noopener noreferrer"
+              target="_blank"
+              href={item.link ?? ""}
+            >
+              Source Code
+            </Link>
+          </Button>
+        </Conditional>
       </CardFooter>
     </Card>
   );
