@@ -21,6 +21,7 @@ export interface ItemProps {
   title: string;
   description: string;
   thumbnail: string;
+  isRoute?: boolean;
   role?: string;
   technologies?: string[];
   sourceCode?: string;
@@ -39,7 +40,7 @@ const ItemCard = ({ item }: ItemCardProps) => {
         <Link
           className="flex justify-center bg-muted aspect-video rounded-md rounded-b-none hover:brightness-75 duration-300"
           rel="noopener noreferrer"
-          target="_blank"
+          target={item.isRoute ? "_self" : "_blank"}
           href={item.link ?? ""}
         >
           <Image
@@ -102,7 +103,7 @@ const ItemCard = ({ item }: ItemCardProps) => {
           <Link
             className={item.link ? "" : "pointer-events-none"}
             rel="noopener noreferrer"
-            target="_blank"
+            target={item.isRoute ? "_self" : "_blank"}
             href={item.link ?? ""}
           >
             {item.cta}

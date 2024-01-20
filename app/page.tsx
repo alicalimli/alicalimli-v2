@@ -9,9 +9,7 @@ import ContactSection from "@/sections/about-me/contact-form";
 
 export default function Home() {
   return (
-    <main className="max-w-2xl mx-auto min-h-screen p-4 py-24 flex flex-col gap-12">
-      <Profile />
-
+    <>
       <NewsletterSection />
 
       <ProductsSection />
@@ -23,8 +21,6 @@ export default function Home() {
       <hr />
 
       <AboutMe />
-
-      <NewsletterCard />
-    </main>
+    </>
   );
 }
