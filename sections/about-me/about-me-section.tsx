@@ -31,7 +31,7 @@ const AboutMe = ({}: AboutMeProps) => {
 
       <p className="mb-2">
         Feel free to reach out through the form below or message me on my
-        socials"
+        socials
       </p>
 
       <footer className="relative">
