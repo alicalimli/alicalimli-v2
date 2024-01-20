@@ -4,40 +4,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { FaGithub, FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
-import { IoIosMail } from "react-icons/io";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-const links = [
-  {
-    tooltip: "X (formerly Twitter)",
-    Icon: FaSquareXTwitter,
-    link: "https://twitter.com/alicalimli_dev",
-  },
-  {
-    Icon: FaLinkedin,
-    tooltip: "LinkedIn",
-    link: "https://www.linkedin.com/in/alicalimli/",
-  },
-  {
-    Icon: FaGithub,
-    tooltip: "Github",
-    link: "https://github.com/alicalimli",
-  },
-  {
-    Icon: IoIosMail,
-    tooltip: "Email",
-    width: "w-7",
-    link: "mailto:@alicalimli76@gmail.com",
-  },
-];
+import SocialLinks from "@/components/social-links/social-links";
 
 interface ProfileProps {}
 
@@ -49,26 +17,6 @@ const Profile = ({}: ProfileProps) => {
 
     window.location.href = `https://magic.beehiiv.com/v1/9732691c-dbb3-4873-b19c-1489caa9e0ba?email=${email}&redirect_to=https://alicalimli.com/`;
   };
-
-  const renderLinks = links.map(({ link, Icon, tooltip, width = "" }) => (
-    <TooltipProvider delayDuration={0} key={link}>
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            href={link}
-            className="hover:text-primary duration:200"
-          >
-            <Icon className={cn("w-5", width)} />
-          </a>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>{tooltip}</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  ));
 
   return (
     <header>
@@ -85,7 +33,7 @@ const Profile = ({}: ProfileProps) => {
           height={25}
           alt="verified badge"
         />
-        {renderLinks}
+        <SocialLinks iconSize="w-6 h-6" />
       </h2>
 
       <p className="text-xl text-muted-foreground">

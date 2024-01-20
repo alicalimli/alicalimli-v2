@@ -7,6 +7,31 @@ import {
 } from "react-icons/si";
 import { ItemProps } from "./components/item-card/ItemCard";
 import { TbBrandFramerMotion } from "react-icons/tb";
+import { FaGithub, FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
+import { IoIosMail } from "react-icons/io";
+
+export const socialLinks = [
+  {
+    tooltip: "X (formerly Twitter)",
+    Icon: FaSquareXTwitter,
+    link: "https://twitter.com/alicalimli_dev",
+  },
+  {
+    Icon: FaLinkedin,
+    tooltip: "LinkedIn",
+    link: "https://www.linkedin.com/in/alicalimli/",
+  },
+  {
+    Icon: FaGithub,
+    tooltip: "Github",
+    link: "https://github.com/alicalimli",
+  },
+  {
+    Icon: IoIosMail,
+    tooltip: "Email",
+    link: "mailto:@alicalimli76@gmail.com",
+  },
+];
 
 export const projects: ItemProps[] = [
   {

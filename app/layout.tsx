@@ -4,7 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import Profile from "@/sections/profile/Profile";
-import { NewsletterCard } from "@/sections/newsletter/newsletter-card";
+import Footer from "@/sections/footer/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -42,7 +42,7 @@ export default function RootLayout({
 
         {children}
 
-        <NewsletterCard />
+        <Footer />
 
         <Toaster richColors closeButton />
       </body>
