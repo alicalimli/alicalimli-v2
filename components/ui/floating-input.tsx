@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import React, { ReactNode } from "react";
 
 const floatingInputClassName =
-  "block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-input appearance-none focus:outline-none focus:ring-0 focus:border-primary peer";
+  "block py-2.5 px-0 w-full text-sm text-white/90 bg-transparent border-0 border-b border-input appearance-none focus:outline-none focus:ring-0 focus:border-primary peer";
 
 interface FloatingInputProps {
   label: string;

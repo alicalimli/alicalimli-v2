@@ -34,7 +34,9 @@ const AboutMe = ({}: AboutMeProps) => {
         me through my socials.
       </p>
 
-      <ContactSection />
+      <footer className="relative">
+        <ContactSection />
+      </footer>
     </section>
   );
 };
