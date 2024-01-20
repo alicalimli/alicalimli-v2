@@ -7,8 +7,8 @@ import * as z from "zod";
 
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import FloatingInput from "@/components/ui/floating-input";
+import { cn } from "@/lib/utils";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -39,8 +39,6 @@ const ContactForm = ({}: ContactFormProps) => {
   const formErrors = form.formState.errors;
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
     console.log(values);
   }
 
@@ -48,7 +46,7 @@ const ContactForm = ({}: ContactFormProps) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-wrap gap-4"
+        className="flex flex-col gap-4"
       >
         <FormField
           control={form.control}
@@ -56,7 +54,7 @@ const ContactForm = ({}: ContactFormProps) => {
           render={({ field }) => (
             <FormItem error={formErrors.name?.message} className="flex-1">
               <FormControl>
-                <Input placeholder="Name" {...field} />
+                <FloatingInput label="Name" {...field} />
               </FormControl>
             </FormItem>
           )}
@@ -66,12 +64,9 @@ const ContactForm = ({}: ContactFormProps) => {
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem
-              error={formErrors.email?.message}
-              className="flex-1 basis-full xs:basis-0"
-            >
+            <FormItem error={formErrors.email?.message}>
               <FormControl>
-                <Input placeholder="Email" {...field} />
+                <FloatingInput label="Email" {...field} />
               </FormControl>
             </FormItem>
           )}
@@ -86,7 +81,7 @@ const ContactForm = ({}: ContactFormProps) => {
               className="basis-full"
             >
               <FormControl>
-                <Input placeholder="Subject" {...field} />
+                <FloatingInput label="Subject" {...field} />
               </FormControl>
             </FormItem>
           )}
@@ -101,16 +96,22 @@ const ContactForm = ({}: ContactFormProps) => {
               className="basis-full"
             >
               <FormControl>
-                <Textarea
-                  className="h-40"
-                  placeholder="Type your message here."
-                  {...field}
+                <FloatingInput
+                  customInput={(inputId, className) => (
+                    <textarea
+                      id={inputId}
+                      className={cn(className, "resize-none h-40")}
+                      {...field}
+                      placeholder=""
+                    />
+                  )}
+                  label="Type your message here."
                 />
               </FormControl>
             </FormItem>
           )}
         />
-        <Button className="w-full" type="submit">
+        <Button className="w-full mt-4" type="submit">
           Send Message
         </Button>
       </form>
