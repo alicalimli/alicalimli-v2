@@ -15,7 +15,7 @@ interface SocialLinksProps {
 }
 
 const SocialLinks = ({ className, iconSize }: SocialLinksProps) => {
-  const renderLinks = socialLinks.map(({ link, Icon, tooltip, width = "" }) => (
+  const renderLinks = socialLinks.map(({ link, Icon, tooltip }) => (
     <li key={link}>
       <TooltipProvider delayDuration={0} key={link}>
         <Tooltip>
@@ -26,7 +26,7 @@ const SocialLinks = ({ className, iconSize }: SocialLinksProps) => {
               href={link}
               className="hover:text-primary duration:200"
             >
-              <Icon className={cn("w-5 h-5", iconSize, width)} />
+              <Icon className={cn("w-5 h-5", iconSize)} />
             </a>
           </TooltipTrigger>
           <TooltipContent>
