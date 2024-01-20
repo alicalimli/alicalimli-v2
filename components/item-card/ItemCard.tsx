@@ -40,6 +40,7 @@ const ItemCard = ({ item }: ItemCardProps) => {
         <Link
           className="flex justify-center bg-muted aspect-video rounded-md rounded-b-none hover:brightness-75 duration-300"
           rel="noopener noreferrer"
+          scroll={true}
           target={item.isRoute ? "_self" : "_blank"}
           href={item.link ?? ""}
         >

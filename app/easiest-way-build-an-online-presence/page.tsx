@@ -1,6 +1,5 @@
-import Section from "@/components/section/section";
-import { Button } from "@/components/ui/button";
-import { ArrowLeftIcon, ChevronLeft } from "lucide-react";
+import ScrollToTop from "@/components/scroll-top/scroll-to-top";
+import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -10,6 +9,8 @@ interface indexProps {}
 const index = ({}: indexProps) => {
   return (
     <main>
+      <ScrollToTop />
+
       <header>
         <Link
           href="/"
