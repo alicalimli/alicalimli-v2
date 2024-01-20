@@ -30,8 +30,8 @@ const AboutMe = ({}: AboutMeProps) => {
       </p>
 
       <p className="mb-2">
-        Got something to say? please feel free to use the form below or message
-        me through my socials.
+        Feel free to reach out through the form below or message me on my
+        socials"
       </p>
 
       <footer className="relative">

@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
-import Script from "next/script";
 import Profile from "@/sections/profile/Profile";
 import { NewsletterCard } from "@/sections/newsletter/newsletter-card";
 
