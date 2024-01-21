@@ -95,8 +95,8 @@ export const products: ItemProps[] = [
   {
     title: "Essential Tips & Tricks (Free)",
     description:
-      "Essential tips and tricks that would level up sssyour website and your visitor's user experience.",
-    cta: "Join The Wailist",
+      "Essential tips and tricks that would level up your website and your visitor's user experience.",
+    cta: "Join The Waitlist",
     link: "https://alicalimli.beehiiv.com/subscribe",
     thumbnail: "/products/webdevvisuals.png",
   },
