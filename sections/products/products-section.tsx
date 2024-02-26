@@ -22,7 +22,7 @@ const ProductsSection = () => {
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    window.location.href = `https://magic.beehiiv.com/v1/9732691c-dbb3-4873-b19c-1489caa9e0ba?email=${email}&redirect_to=https://www.webdevvisuals.com/landing/samples/aed4fda95e16`;
+    window.location.href = `https://magic.beehiiv.com/v1/9732691c-dbb3-4873-b19c-1489caa9e0ba?email=${email}&redirect_to=https://alicalimli.beehiiv.com/`;
   };
 
   return (
