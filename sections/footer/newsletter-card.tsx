@@ -23,7 +23,7 @@ export function NewsletterCard() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Ali’s Newsletter</CardTitle>
+        <CardTitle>Empower your Web Dev Journey</CardTitle>
         <CardDescription>
           Join 1k+ developers getting tips, strategies, and resources that would
           help you succeed in your web dev journey.

@@ -7,7 +7,7 @@ interface indexProps {}
 
 const index = ({}: indexProps) => {
   return (
-    <main>
+    <main className="my-6">
       <ScrollToTop />
 
       <header>

@@ -10,8 +10,12 @@ const NewsletterSection = () => {
   ));
 
   return (
-    <Section title="Newsletters" viewAllLink="https://alicalimli.beehiiv.com/">
-      <ul className="grid xs:grid-cols-2 gap-8 relative">{renderIssues}</ul>
+    <Section
+      className="mt-6"
+      title="Newsletters"
+      viewAllLink="https://alicalimli.beehiiv.com/"
+    >
+      <ul className="grid xs:grid-cols-2 gap-6 relative">{renderIssues}</ul>
     </Section>
   );
 };

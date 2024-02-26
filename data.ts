@@ -1,4 +1,5 @@
 import {
+  SiFigma,
   SiFirebase,
   SiNextdotjs,
   SiRedux,
@@ -75,7 +76,7 @@ export const recentIssues: ItemProps[] = [
   },
   {
     title: "You have to code or build SOMETHING",
-    description: "If you want to improve as a developer, this is the way.",
+    description: "As a Developer, this is how you level up.",
     link: "/you-have-to-code-or-build-something",
     isRoute: true,
     thumbnail: "/newsletter-banner.png",
@@ -96,8 +97,8 @@ export const products: ItemProps[] = [
     title: "Essential Tips & Tricks (Free)",
     description:
       "Essential tips and tricks that would level up your website and your visitor's user experience.",
+    badge: "Join The Waitlist",
     cta: "Join The Waitlist",
-    link: "https://alicalimli.beehiiv.com/subscribe",
     thumbnail: "/products/webdevvisuals.png",
   },
 ];
@@ -107,6 +108,11 @@ export const techStack = [
     name: "NextJS",
     Icon: SiNextdotjs,
     tooltip: "JavaScript Framework",
+  },
+  {
+    name: "Figma",
+    Icon: SiFigma,
+    tooltip: "Designing User Interfaces",
   },
   {
     name: "Redux Toolkit",

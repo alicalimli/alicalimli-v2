@@ -13,25 +13,23 @@ const AboutMe = ({}: AboutMeProps) => {
       </Avatar>
 
       <p className="text-white/85 font-semibold">
-        Hey I'm Ali. 👋
+        Hey, Ali Here! 👋
         <br />
         I'm a Front-end Developer and I Create Web Development Content.
       </p>
 
       <p>
-        I help aspiring developers succeed in their web development journey by
-        providing valuable knowledge that I have learned throughout my own web
-        dev journey.
+        I help aspiring developers succeed in their web dev journey by sharing
+        useful stuffs and lessons from my own experience.
       </p>
 
       <p>
-        I'm focused on building high-quality websites that is also visually
-        appealing and easy to use.
+        I'm specialized in creating high quality websites and webapps that are
+        not just visually appealing but also gives an awesome user experience.
       </p>
 
       <p className="mb-2">
-        Feel free to reach out through the form below or message me on my
-        socials
+        Let's chat! Hit me up on the form below or in any of my socials.
       </p>
 
       <footer className="relative">

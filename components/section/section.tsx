@@ -22,7 +22,7 @@ const Section = ({
 }: SectionProps) => {
   return (
     <section className={cn("", className)}>
-      <header className={cn("flex items-center mb-3", headerClassName)}>
+      <header className={cn("flex items-center mb-5", headerClassName)}>
         <h4 className="scroll-m-20 text-xl font-semibold tracking-tight opacity-95">
           {title}
         </h4>

@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
-import Profile from "@/sections/profile/Profile";
+import Profile from "@/sections/profile/profile";
 import Footer from "@/sections/footer/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -34,17 +34,16 @@ export default function RootLayout({
     <html className="dark" lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto p-4 py-24 flex flex-col gap-12",
+          "min-h-screen bg-background font-sans antialiased ",
           inter.variable
         )}
       >
-        <Profile />
-
-        {children}
-
-        <Footer />
-
-        <Toaster richColors closeButton />
+        <main className="max-w-2xl mx-auto p-4 py-24">
+          <Profile />
+          {children}
+          <Footer />
+          <Toaster richColors closeButton />
+        </main>
       </body>
     </html>
   );

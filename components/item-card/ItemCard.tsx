@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -16,10 +18,12 @@ import {
 import { Badge } from "@/components/ui/badge";
 import Conditional from "../conditional/Conditional";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export interface ItemProps {
   title: string;
   description: string;
+  badge?: string;
   thumbnail: string;
   isRoute?: boolean;
   role?: string;
@@ -34,97 +38,103 @@ interface ItemCardProps {
 }
 
 const ItemCard = ({ item }: ItemCardProps) => {
+  const router = useRouter();
+
+  const content = (
+    <div className="cursor-pointer rounded-xl group relative">
+      <div className="-inset-3 absolute bg-transparent group-hover:bg-card/50  duration-300 -z-10 rounded-xl" />
+      <Card className="flex flex-col border-none bg-transparent h-full z-10">
+        <CardHeader className="px-0 p-0">
+          <Image
+            alt={`${item.title} thumbnail`}
+            className="object-contain rounded-xl w-full"
+            src={item.thumbnail}
+            width={300}
+            height={300}
+          />
+
+          <Conditional condition={Boolean(item.badge)}>
+            <Badge
+              variant={"secondary"}
+              className="absolute top-2 right-2 text-xs "
+            >
+              {item.badge}
+            </Badge>
+          </Conditional>
+        </CardHeader>
+
+        <CardContent className="py-4 px-0 relative">
+          <Conditional condition={Boolean(item.role)}>
+            <p className="text-xs text-muted-foreground">
+              Design & Development
+            </p>
+          </Conditional>
+
+          <h5 className="scroll-m-20 text-lg font-semibold w-[90%] tracking-tight flex items-center gap-2">
+            {item.title}
+
+            <Conditional condition={Boolean(item.sourceCode)}>
+              <TooltipProvider delayDuration={0}>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+
+                        window.open(
+                          item.sourceCode,
+                          "_blank",
+                          "noopener,noreferrer"
+                        );
+                      }}
+                    >
+                      <FaGithub className="w-5 h-5" />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>View Source Code</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </Conditional>
+          </h5>
+          <p className="text-sm text-muted-foreground mt-1">
+            {item.description}
+          </p>
+
+          {/* <ArrowUpRightIcon size={20} className="absolute right-2 top-5" /> */}
+        </CardContent>
+
+        <CardFooter className="mt-auto items-start p-0 flex flex-col">
+          <ul className="flex gap-1 flex-wrap">
+            {item?.technologies?.map((tech) => (
+              <li key={tech}>
+                <Badge className="bg-muted text-white/80 rounded-md">
+                  {tech}
+                </Badge>
+              </li>
+            ))}
+          </ul>
+        </CardFooter>
+      </Card>
+    </div>
+  );
+
   return (
-    <Card className="flex flex-col h-full hover:bg-border duration-300">
-      <CardHeader className="p-4">
+    <Conditional
+      condition={Boolean(item.link)}
+      whenTrue={
         <Link
-          className="flex justify-center bg-muted aspect-video rounded-md rounded-b-none hover:brightness-75 duration-300"
           rel="noopener noreferrer"
           scroll={true}
           target={item.isRoute ? "_self" : "_blank"}
           href={item.link ?? ""}
         >
-          <Image
-            alt={`${item.title} thumbnail`}
-            className="object-contain"
-            src={item.thumbnail}
-            width={300}
-            height={300}
-          />
+          {content}
         </Link>
-      </CardHeader>
-
-      <CardContent className="px-4">
-        <Conditional condition={Boolean(item.role)}>
-          <p className="text-xs text-muted-foreground">Design & Development</p>
-        </Conditional>
-
-        <h5 className="scroll-m-20 text-lg font-semibold tracking-tight flex items-center gap-2">
-          {item.title}
-
-          <Conditional condition={Boolean(item.sourceCode)}>
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    href={item.sourceCode}
-                    className="hover:text-primary duration:200"
-                  >
-                    <FaGithub className="w-5 h-5" />
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>View Source Code</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-          </Conditional>
-        </h5>
-        <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
-      </CardContent>
-
-      <CardFooter className="mt-auto items-start px-4 pb-4 flex flex-col">
-        <ul className="flex gap-1 flex-wrap">
-          {item?.technologies?.map((tech) => (
-            <li key={tech}>
-              <Badge className="bg-muted text-white/80 rounded-md">
-                {tech}
-              </Badge>
-            </li>
-          ))}
-        </ul>
-
-        <Button
-          variant={item.link ? "default" : "outline"}
-          className="w-full mt-4"
-          asChild
-        >
-          <Link
-            className={item.link ? "" : "pointer-events-none"}
-            rel="noopener noreferrer"
-            target={item.isRoute ? "_self" : "_blank"}
-            href={item.link ?? ""}
-          >
-            {item.cta}
-          </Link>
-        </Button>
-
-        <Conditional condition={Boolean(item.sourceCode)}>
-          <Button variant={"secondary"} className="w-full mt-2" asChild>
-            <Link
-              className={item.link ? "" : "pointer-events-none"}
-              rel="noopener noreferrer"
-              target="_blank"
-              href={item.link ?? ""}
-            >
-              Source Code
-            </Link>
-          </Button>
-        </Conditional>
-      </CardFooter>
-    </Card>
+      }
+      whenFalse={content}
+    />
   );
 };
 

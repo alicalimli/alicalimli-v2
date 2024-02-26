@@ -6,6 +6,7 @@ import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import SocialLinks from "@/components/social-links/social-links";
+import NewsletterSection from "../newsletter-section/newsletter-section";
 
 interface ProfileProps {}
 
@@ -25,7 +26,7 @@ const Profile = ({}: ProfileProps) => {
         <AvatarFallback>AL</AvatarFallback>
       </Avatar>
 
-      <h2 className="scroll-m-20 text-3xl font-semibold my-2 tracking-tight flex items-center gap-2">
+      <h2 className="scroll-m-20 text-2xl sm:text-3xl font-semibold my-2 tracking-tight flex items-center gap-2">
         Ali Calimli
         <Image
           src="/verified-badge.png"
@@ -36,7 +37,7 @@ const Profile = ({}: ProfileProps) => {
         <SocialLinks iconSize="w-6 h-6" />
       </h2>
 
-      <p className="text-xl text-muted-foreground">
+      <p className="text-md sm:text-xl  text-muted-foreground">
         I send 1k+ developers tips, strategies, and resources that would help
         them succeed in their web development journey.
       </p>

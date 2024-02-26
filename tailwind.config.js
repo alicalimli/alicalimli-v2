@@ -12,9 +12,6 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    screens: {
-      xs: "480px",
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -23,6 +20,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        xs: "480px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

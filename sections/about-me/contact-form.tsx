@@ -171,7 +171,12 @@ const ContactForm = ({}: ContactFormProps) => {
             </FormItem>
           )}
         />
-        <Button disabled={isSending} className="w-full mt-4" type="submit">
+        <Button
+          variant={"secondary"}
+          disabled={isSending}
+          className="w-full mt-4"
+          type="submit"
+        >
           <Conditional condition={isSending}>
             <LoaderIcon className="animate-spin block w-5 mr-1" />
           </Conditional>

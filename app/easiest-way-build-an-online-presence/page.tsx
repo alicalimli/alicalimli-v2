@@ -8,7 +8,7 @@ interface indexProps {}
 
 const index = ({}: indexProps) => {
   return (
-    <main>
+    <main className="my-6">
       <ScrollToTop />
 
       <header>
@@ -29,7 +29,7 @@ const index = ({}: indexProps) => {
         </p>
       </header>
 
-      <main className="leading-7 flex flex-col gap-4 mt-4 text-white/85">
+      <section className="leading-7 flex flex-col gap-4 mt-4 text-white/85">
         <p>As a developer,</p>
 
         <p>
@@ -110,7 +110,7 @@ const index = ({}: indexProps) => {
         <p>
           Thanks for reading, <br /> Ali
         </p>
-      </main>
+      </section>
     </main>
   );
 };
